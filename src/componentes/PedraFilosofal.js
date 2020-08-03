@@ -27,14 +27,14 @@ export default class PedraFilosofal extends React.Component{
     perguntas: 'Olá meus bruxos e bruxas, Vamos começar ?',
     respostaCerta: '',
     respostaErrada: '',
-    pontosCertor: 0,
+    pontosCertos: 0,
     pontosErrados: 0,
     styleVedareiro: '',
     verdadeiro: '',
     styleFalso: '',
     falso: '',
     styleComecar: styles.botaoComecar,
-    comecar: 'Começar',
+    comecar: 'Estou pronto!',
     styleZerar: '',
     zerar: ''
   }
@@ -45,7 +45,7 @@ export default class PedraFilosofal extends React.Component{
           perguntas: this.frases[perguntaRandom],
           respostaCerta: '',
           respostaErrada: '',
-          pontosCertor: 0,
+          pontosCertos: 0,
           pontosErrados: 0,
           styleVedareiro: styles.botaoVerdade,
           verdadeiro: "Verdadeiro",
@@ -65,8 +65,25 @@ export default class PedraFilosofal extends React.Component{
           perguntas: this.frases[perguntaRandom],
           respostaCerta: "Resposta Certa. Parabéns!",
           respostaErrada: '',
-          pontosCertor: this.state.pontosCertor + 1
+          pontosCertos: this.state.pontosCertos + 1
         })
+        if(this.state.pontosCertos === 10){
+          this.setState({
+            perguntas: "Parabéns!! Eu sábia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
+            respostaCerta: '',
+            respostaErrada: '',
+            pontosCertos: 0,
+            pontosErrados: 0,
+            styleComecar: styles.botaoComecar,
+            comecar: 'Refazer',
+            styleZerar: '',
+            zerar: '',
+            styleVedareiro: '',
+            verdadeiro: '',
+            styleFalso: '',
+            falso: '',
+          })
+        }
     }else{
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
 
@@ -87,8 +104,25 @@ export default class PedraFilosofal extends React.Component{
         perguntas: this.frases[perguntaRandom],
         respostaCerta: "Resposta Certa. Parabéns!",
         respostaErrada: '',
-        pontosCertor: this.state.pontosCertor + 1
+        pontosCertos: this.state.pontosCertos + 1
       })
+      if(this.state.pontosCertos === 10){
+        this.setState({
+          perguntas: "Parabéns!! Eu sábia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
+          respostaCerta: '',
+          respostaErrada: '',
+          pontosCertos: 0,
+          pontosErrados: 0,
+          styleComecar: styles.botaoComecar,
+          comecar: 'Refazer',
+          styleZerar: '',
+          zerar: '',
+          styleVedareiro: '',
+          verdadeiro: '',
+          styleFalso: '',
+          falso: '',
+        })
+      }
     }else{
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
       this.setState({
@@ -105,10 +139,10 @@ export default class PedraFilosofal extends React.Component{
       perguntas: 'Olá meus bruxos e bruxas, Vamos começar ?',
       respostaCerta: '',
       respostaErrada: '',
-      pontosCertor: 0,
+      pontosCertos: 0,
       pontosErrados: 0,
       styleComecar: styles.botaoComecar,
-      comecar: 'Começar',
+      comecar: 'Estou pronto!',
       styleZerar: '',
       zerar: '',
       styleVedareiro: '',
@@ -124,7 +158,7 @@ export default class PedraFilosofal extends React.Component{
           <View style={styles.containerInfo}> 
             <TouchableOpacity 
               onPress={() => {
-                Alert.alert("Olá, eu sou o Harry Potter!", "Esse jogo é para provar que você é um bruxo ou uma bruxa de verdade, para entrar na escola de magia e bruxaria de Hogwarts. Vamos lá ?")}
+                Alert.alert("Olá, eu sou o Harry Potter!", "Agora vamos saber se você pode fazer parte da escola de magia e bruxaria de Hogwarts.\nVamos nessa ?\nPara começar aperte o botão 'Estou pronto!'.\nLogo em seguida, se você acertar 10 pontos a vaga da escola de magia e bruxaria de Hogwarts é sua\nBoa sorte!")}
               }>
               <Image
                 style={styles.info}
@@ -134,7 +168,7 @@ export default class PedraFilosofal extends React.Component{
           </View>
 
           <View style={styles.containerPontos}> 
-            <Text style={styles.fontePontos}>Acertos: {this.state.pontosCertor}</Text>
+            <Text style={styles.fontePontos}>Acertos: {this.state.pontosCertos}</Text>
             <Text style={styles.fontePontos}>Erros: {this.state.pontosErrados}</Text>
             <View style={styles.containerBotao}>
               <TouchableOpacity 
@@ -256,7 +290,7 @@ export const styles = StyleSheet.create({
     borderRadius: 30,
     justifyContent: "center",
     alignItems: "center",
-    width: 100,
+    width: 140,
     height: 30,
     marginTop: 0,
     marginRight: 10,
