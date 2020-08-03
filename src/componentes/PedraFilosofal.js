@@ -9,18 +9,18 @@ Alert } from 'react-native'
 export default class PedraFilosofal extends React.Component{
   frases = [
   //Verdadeiras
-  "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort?",
-  "O nome do professor de Feitiços é Filio Flitwick?",
-  "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry?",
-  "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal?",
-  "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo?",
-  "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts?",
+  "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort",
+  "O nome do professor de Feitiços é Filio Flitwick",
+  "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry",
+  "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal",
+  "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo",
+  "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts",
   //Falsas
-  "Harry Potter faz aniversário dia 31/05?",
-  "Rony tem três irmãos?",
-  "São os alunos que se classificados para as casas de Hogwarts?",
-  "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória?",
-  "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida?"
+  "Harry Potter faz aniversário dia 31/05",
+  "Rony tem três irmãos",
+  "São os alunos que se classificados para as casas de Hogwarts",
+  "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória",
+  "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"
   ]
   
   state = {
@@ -59,7 +59,7 @@ export default class PedraFilosofal extends React.Component{
   }
 
   verdade = () => {
-    if(this.state.perguntas == "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort?" || this.state.perguntas == "O nome do professor de Feitiços é Filio Flitwick?" || this.state.perguntas == "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry?"|| this.state.perguntas == "As casas se Hogwarts são Lufa Lufa, Sonserina, Grifinoria E Corvinal?"|| this.state.perguntas == "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo?"|| this.state.perguntas == "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts?"){
+    if(this.state.perguntas == "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort" || this.state.perguntas == "O nome do professor de Feitiços é Filio Flitwick" || this.state.perguntas == "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry"|| this.state.perguntas == "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo"|| this.state.perguntas == "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts" || this.state.perguntas == "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal"){
         const perguntaRandom = Math.floor(Math.random() * this.frases.length)
         this.setState({
           perguntas: this.frases[perguntaRandom],
@@ -93,11 +93,28 @@ export default class PedraFilosofal extends React.Component{
         respostaCerta: '',
         pontosErrados: this.state.pontosErrados + 1
       })
+      if(this.state.pontosErrados === 10){
+        this.setState({
+          perguntas: "Muito triste!\nDessa vez você não pode entrar para a escola de magia e bruxaria de Hogwarts.\nMas não desista, refaça a teste e venha fazer parte das nossas aventuras. Boa sorte!", 
+          respostaCerta: '',
+          respostaErrada: '',
+          pontosCertos: 0,
+          pontosErrados: 0,
+          styleComecar: styles.botaoComecar,
+          comecar: 'Refazer',
+          styleZerar: '',
+          zerar: '',
+          styleVedareiro: '',
+          verdadeiro: '',
+          styleFalso: '',
+          falso: '',
+        })
+      }
     }
   }
 
   falso = () => {
-    if(this.state.perguntas == "Harry Potter faz aniversário dia 31/05?" || this.state.perguntas == "Rony tem três irmãos?"|| this.state.perguntas == "São os alunos que se classificados para as casas de Hogwarts?"|| this.state.perguntas == "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória?"|| this.state.perguntas == "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida?"){
+    if(this.state.perguntas == "Harry Potter faz aniversário dia 31/05" || this.state.perguntas == "Rony tem três irmãos"|| this.state.perguntas == "São os alunos que se classificados para as casas de Hogwarts"|| this.state.perguntas == "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória"|| this.state.perguntas == "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"){
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
 
       this.setState({
@@ -131,6 +148,23 @@ export default class PedraFilosofal extends React.Component{
         respostaCerta: '',
         pontosErrados: this.state.pontosErrados + 1
       })
+      if(this.state.pontosErrados === 10){
+        this.setState({
+          perguntas: "Muito triste!\nDessa vez você não pode entrar para a escola de magia e bruxaria de Hogwarts.\nMas não desista, refaça a teste e venha fazer parte das nossas aventuras. Boa sorte!", 
+          respostaCerta: '',
+          respostaErrada: '',
+          pontosCertos: 0,
+          pontosErrados: 0,
+          styleComecar: styles.botaoComecar,
+          comecar: 'Refazer',
+          styleZerar: '',
+          zerar: '',
+          styleVedareiro: '',
+          verdadeiro: '',
+          styleFalso: '',
+          falso: '',
+        })
+      }
     }
   }
 
@@ -158,7 +192,7 @@ export default class PedraFilosofal extends React.Component{
           <View style={styles.containerInfo}> 
             <TouchableOpacity 
               onPress={() => {
-                Alert.alert("Olá, eu sou o Harry Potter!", "Agora vamos saber se você pode fazer parte da escola de magia e bruxaria de Hogwarts.\nVamos nessa ?\nPara começar aperte o botão 'Estou pronto!'.\nLogo em seguida, se você acertar 10 pontos a vaga da escola de magia e bruxaria de Hogwarts é sua\nBoa sorte!")}
+                Alert.alert("Olá, eu sou o Harry Potter!", "Agora vamos saber se você pode fazer parte da escola de magia e bruxaria de Hogwarts.\nVamos nessa \nPara começar aperte o botão 'Estou pronto!'.\nLogo em seguida, se você acertar 10 pontos a vaga da escola de magia e bruxaria de Hogwarts é sua. Se caso errar 10 pontos, você pode tentar entrar para escola no segundo semestre.\nBoa sorte!")}
               }>
               <Image
                 style={styles.info}
