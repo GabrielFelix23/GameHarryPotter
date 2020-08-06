@@ -4,6 +4,9 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Index from './componentes/Index'
 import PedraFilosofal from './componentes/PedraFilosofal'
+import CamaraSecreta from './componentes/CamaraSecreta'
+import PrisioneirodeAzkaban from './componentes/PrisioneirodeAzkaban'
+import CaliceDeFogo from './componentes/CaliceDeFogo'
 
 const Stack = createStackNavigator()
 
@@ -21,7 +24,21 @@ export default function App() {
             component={PedraFilosofal}
             options={{headerShown:false}}
         />
-      
+        <Stack.Screen
+            name="Câmara Secreta"
+            component={CamaraSecreta}
+            options={{headerShown:false}}
+        />
+        <Stack.Screen
+            name="Prisioneiro de Azkaban"
+            component={PrisioneirodeAzkaban}
+            options={{headerShown:false}}
+        />
+        <Stack.Screen
+            name="Calice de Fogo"
+            component={CaliceDeFogo}
+            options={{headerShown:false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -29,42 +29,49 @@ export default function Index({navigation}){
                         />  
                     </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Câmara Secreta')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/camaraSecreta.jpg")}
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Prisioneiro de Azkaban')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/prisioneiroDeAzkaban.jpg")}
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Calice de Fogo')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/caliceDeFogo.jpg")}
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/ordemDaFenix.jpg")}
                         />
                     </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('')}>
+                        <Image
+                            style={styles.filmes}
+                            source={require("./img/enigmaDoPríncipe.jpg")}
+                        />
+                    </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/reliquiaDaMorteP1.jpg")}
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/reliquiaDaMorteP2.jpg")}
