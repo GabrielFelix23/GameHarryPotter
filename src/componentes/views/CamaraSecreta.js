@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet,
-Text, 
+import {Text, 
 View, 
 Image, 
 TouchableOpacity, 
 Alert } from 'react-native'
+import Styles from '../styles/styles'
 
 export default class CamaraSrcreta extends React.Component{
   frases = [
@@ -34,7 +34,7 @@ export default class CamaraSrcreta extends React.Component{
     verdadeiro: '',
     styleFalso: '',
     falso: '',
-    styleComecar: styles.botaoComecar,
+    styleComecar: Styles.botaoComecar,
     comecar: 'Estou pronto!',
     styleZerar: '',
     zerar: ''
@@ -48,13 +48,13 @@ export default class CamaraSrcreta extends React.Component{
           respostaErrada: '',
           pontosCertos: 0,
           pontosErrados: 0,
-          styleVedareiro: styles.botaoVerdade,
+          styleVedareiro: Styles.botaoVerdade,
           verdadeiro: "Verdadeiro",
-          styleFalso: styles.botaoFalso,
+          styleFalso: Styles.botaoFalso,
           falso: 'Falso',
           styleComecar: '',
           comecar: '',
-          styleZerar: styles.botaoZera,
+          styleZerar: Styles.botaoZera,
           zerar: "Zerar"
         })
   }
@@ -75,7 +75,7 @@ export default class CamaraSrcreta extends React.Component{
             respostaErrada: '',
             pontosCertos: 0,
             pontosErrados: 0,
-            styleComecar: styles.botaoComecar,
+            styleComecar: Styles.botaoComecar,
             comecar: 'Refazer',
             styleZerar: '',
             zerar: '',
@@ -101,7 +101,7 @@ export default class CamaraSrcreta extends React.Component{
           respostaErrada: '',
           pontosCertos: 0,
           pontosErrados: 0,
-          styleComecar: styles.botaoComecar,
+          styleComecar: Styles.botaoComecar,
           comecar: 'Refazer',
           styleZerar: '',
           zerar: '',
@@ -131,7 +131,7 @@ export default class CamaraSrcreta extends React.Component{
           respostaErrada: '',
           pontosCertos: 0,
           pontosErrados: 0,
-          styleComecar: styles.botaoComecar,
+          styleComecar: Styles.botaoComecar,
           comecar: 'Refazer',
           styleZerar: '',
           zerar: '',
@@ -156,7 +156,7 @@ export default class CamaraSrcreta extends React.Component{
           respostaErrada: '',
           pontosCertos: 0,
           pontosErrados: 0,
-          styleComecar: styles.botaoComecar,
+          styleComecar: Styles.botaoComecar,
           comecar: 'Refazer',
           styleZerar: '',
           zerar: '',
@@ -176,7 +176,7 @@ export default class CamaraSrcreta extends React.Component{
       respostaErrada: '',
       pontosCertos: 0,
       pontosErrados: 0,
-      styleComecar: styles.botaoComecar,
+      styleComecar: Styles.botaoComecar,
       comecar: 'Estou pronto!',
       styleZerar: '',
       zerar: '',
@@ -189,66 +189,66 @@ export default class CamaraSrcreta extends React.Component{
 
   render(){ 
     return (
-      <View style={styles.planodefundo}>
-          <View style={styles.containerInfo}> 
+      <View style={Styles.planodefundo}>
+          <View style={Styles.containerInfo}> 
             <TouchableOpacity 
               onPress={() => {
                 Alert.alert("Olá, eu sou o Harry Potter!", "Agora vamos saber se você pode fazer parte da escola de magia e bruxaria de Hogwarts.\nVamos nessa?\nPara começar aperte o botão 'Estou pronto!'.\nLogo em seguida, se você acertar 10 pontos a vaga da escola de magia e bruxaria de Hogwarts é sua. Se caso errar 10 pontos, você pode tentar entrar para escola no segundo semestre.\nBoa sorte!")}
               }>
               <Image
-                style={styles.info}
+                style={Styles.info}
                 source={require("../img/info.png")}
               />
             </TouchableOpacity>  
           </View>
 
-          <View style={styles.containerPontos}> 
-            <Text style={styles.fontePontos}>Acertos: {this.state.pontosCertos}</Text>
-            <Text style={styles.fontePontos}>Erros: {this.state.pontosErrados}</Text>
-            <View style={styles.containerBotao}>
+          <View style={Styles.containerPontos}> 
+            <Text style={Styles.fontePontos}>Acertos: {this.state.pontosCertos}</Text>
+            <Text style={Styles.fontePontos}>Erros: {this.state.pontosErrados}</Text>
+            <View style={Styles.containerBotao}>
               <TouchableOpacity 
                 style={this.state.styleComecar}
                 onPress={this.comecar}
                 >
-                  <Text style={styles.textbotao}>{this.state.comecar}</Text>
+                  <Text style={Styles.textbotao}>{this.state.comecar}</Text>
               </TouchableOpacity>
               <TouchableOpacity 
                 style={this.state.styleZerar}
                 onPress={this.zerar}
                 >
-                  <Text style={styles.textbotao}>{this.state.zerar}</Text>
+                  <Text style={Styles.textbotao}>{this.state.zerar}</Text>
               </TouchableOpacity>
               </View>
           </View>
 
-        <View style={styles.container}>  
+        <View style={Styles.container}>  
 
-          <Text style={styles.fonteRespostaCerta}>{this.state.respostaCerta}
-            <Text style={styles.fonteRespostaErrada}>{this.state.respostaErrada}</Text>
+          <Text style={Styles.fonteRespostaCerta}>{this.state.respostaCerta}
+            <Text style={Styles.fonteRespostaErrada}>{this.state.respostaErrada}</Text>
           </Text>
 
-          <View style={styles.containerImg}>  
+          <View style={Styles.containerImg}>  
             <Image  
-              style={styles.img}
+              style={Styles.img}
               source={require("../img/Chapeu.jpg")}
             />
           </View>
 
-          <Text style={styles.fonte}>{this.state.perguntas}</Text>
+          <Text style={Styles.fonte}>{this.state.perguntas}</Text>
 
-          <View style={styles.containerBotao}>
+          <View style={Styles.containerBotao}>
             <TouchableOpacity 
               style={this.state.styleVedareiro}
               onPress={this.verdade}
               >
-                <Text style={styles.textbotao}>{this.state.verdadeiro}</Text>
+                <Text style={Styles.textbotao}>{this.state.verdadeiro}</Text>
             </TouchableOpacity>
             
             <TouchableOpacity 
               style={this.state.styleFalso}
               onPress={this.falso}
               >
-                <Text style={styles.textbotao}>{this.state.falso}</Text>
+                <Text style={Styles.textbotao}>{this.state.falso}</Text>
             </TouchableOpacity>
             
           </View>
@@ -258,117 +258,3 @@ export default class CamaraSrcreta extends React.Component{
     )
   }
 }
-
-export const styles = StyleSheet.create({
-  planodefundo:{
-    width: "100%",
-    height: "100%",
-    flex: 1,
-    backgroundColor: '#744B2B'
-  },  
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  containerInfo:{
-    marginLeft:'80%',
-    marginRight: 15,
-    marginTop: 35,
-  },
-  containerPontos:{
-    marginRight:'50%',
-    marginLeft: 25,
-    marginTop: -50,
-    marginBottom: -30,
-  },
-  containerImg:{
-    marginTop: 5,
-    marginBottom: 20
-  },
-  containerBotao:{
-    marginTop: 20,
-    flexDirection: "row"
-  },
-  botaoVerdade:{
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "green",
-    borderRadius: 20,
-    width: 110,
-    height: 50,
-    margin: 10
-  },
-  botaoFalso:{
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "red",
-    borderRadius: 20,
-    width: 110,
-    height: 50,
-    margin: 10
-  },
-  botaoZera:{
-    borderWidth: 2,
-    borderColor: "white",
-    borderRadius: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    width: 80,
-    height: 30,
-    marginTop: 0,
-    marginBottom: -20,
-  },
-  botaoComecar:{
-    borderWidth: 2,
-    borderColor: "white",
-    borderRadius: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    width: 140,
-    height: 30,
-    marginTop: 0,
-    marginRight: 10,
-    marginBottom: -20,
-  },
-  textbotao:{
-    fontSize: 20,
-    color: 'white'
-  },
-  img:{
-    borderRadius: 100, 
-    width: 160, 
-    height: 160
-  },
-  info:{
-    width: 50,
-    height: 50
-  },
-  fonte:{
-    fontSize: 23,
-    color: "white",
-    fontStyle: "italic",
-    textAlign: "center",
-    marginRight: 20,
-    marginLeft: 20
-  },
-  fontePontos:{
-    fontSize: 20,
-    color: "white",
-    textAlign: "left"
-  },
-  fonteRespostaCerta:{
-    fontSize: 25,
-    color: "green",
-    fontStyle: "italic",
-    fontWeight: "bold",
-    textAlign: "center"
-  },
-  fonteRespostaErrada:{
-    fontSize: 25,
-    color: "red",
-    fontStyle: "italic",
-    fontWeight: "bold",
-    textAlign: "center"
-  }
-})
