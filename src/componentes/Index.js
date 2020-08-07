@@ -50,14 +50,14 @@ export default function Index({navigation}){
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity onPress={() => navigation.navigate('')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Ordem da Fenix')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/ordemDaFenix.jpg")}
                         />
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Enigma do Principe')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/enigmaDoPríncipe.jpg")}
