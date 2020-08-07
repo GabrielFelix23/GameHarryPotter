@@ -9,6 +9,7 @@ import PrisioneirodeAzkaban from './componentes/PrisioneirodeAzkaban'
 import CaliceDeFogo from './componentes/CaliceDeFogo'
 import OrdemDaFenix from './componentes/ordemDaFenix'
 import EnigmaDoPrincipe from './componentes/enigmaDoPrincipe'
+import ReliquiasDaMorte from './componentes/reliquiasDaMorte'
 
 const Stack = createStackNavigator()
 
@@ -46,10 +47,14 @@ export default function App() {
             component={OrdemDaFenix}
             options={{headerShown:false}}
         />
-
         <Stack.Screen
             name="Enigma do Principe"
             component={EnigmaDoPrincipe}
+            options={{headerShown:false}}
+        />
+        <Stack.Screen
+            name="Reliquias da Morte"
+            component={ReliquiasDaMorte}
             options={{headerShown:false}}
         />
       </Stack.Navigator>

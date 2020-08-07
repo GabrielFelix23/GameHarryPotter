@@ -64,17 +64,10 @@ export default function Index({navigation}){
                         />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity onPress={() => navigation.navigate('')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Reliquias da Morte')}>
                         <Image
                             style={styles.filmes}
                             source={require("./img/reliquiaDaMorteP1.jpg")}
-                        />
-                    </TouchableOpacity>
-                    
-                    <TouchableOpacity onPress={() => navigation.navigate('')}>
-                        <Image
-                            style={styles.filmes}
-                            source={require("./img/reliquiaDaMorteP2.jpg")}
                         />
                     </TouchableOpacity>
                 </ScrollView>
