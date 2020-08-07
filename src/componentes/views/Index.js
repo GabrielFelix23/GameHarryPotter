@@ -8,7 +8,7 @@ export default function Index({navigation}){
                 <TouchableOpacity onPress={() => Alert.alert("GameHarryPotter","Esse jogo é para provar que você é um bruxo ou uma bruxa de verdade, para entrar na escola de magia e bruxaria de Hogwarts.\nPrimeiro, escolha qual é o seu filme favorito.\nLogo após, vamos ver o quão você sabe sobre ele...")}>  
                     <Image  
                         style={styles.info}
-                        source={require("./img/info.png")}
+                        source={require("../img/info.png")}
                     />
                 </TouchableOpacity> 
             </View>
@@ -25,49 +25,49 @@ export default function Index({navigation}){
                     <TouchableOpacity onPress={() => navigation.navigate('Pedra Filosofal')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/pedraFilosofal.jpg")}
+                            source={require("../img/pedraFilosofal.jpg")}
                         />  
                     </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate('Câmara Secreta')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/camaraSecreta.jpg")}
+                            source={require("../img/camaraSecreta.jpg")}
                         />
                     </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate('Prisioneiro de Azkaban')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/prisioneiroDeAzkaban.jpg")}
+                            source={require("../img/prisioneiroDeAzkaban.jpg")}
                         />
                     </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate('Calice de Fogo')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/caliceDeFogo.jpg")}
+                            source={require("../img/caliceDeFogo.jpg")}
                         />
                     </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate('Ordem da Fenix')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/ordemDaFenix.jpg")}
+                            source={require("../img/ordemDaFenix.jpg")}
                         />
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => navigation.navigate('Enigma do Principe')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/enigmaDoPríncipe.jpg")}
+                            source={require("../img/enigmaDoPríncipe.jpg")}
                         />
                     </TouchableOpacity>
                     
                     <TouchableOpacity onPress={() => navigation.navigate('Reliquias da Morte')}>
                         <Image
                             style={styles.filmes}
-                            source={require("./img/reliquiaDaMorteP1.jpg")}
+                            source={require("../img/reliquiaDaMorteP1.jpg")}
                         />
                     </TouchableOpacity>
                 </ScrollView>

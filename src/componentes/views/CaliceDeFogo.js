@@ -193,7 +193,7 @@ export default class CaliceDeFogo extends React.Component{
               }>
               <Image
                 style={styles.info}
-                source={require("./img/info.png")}
+                source={require("../img/info.png")}
               />
             </TouchableOpacity>  
           </View>
@@ -226,7 +226,7 @@ export default class CaliceDeFogo extends React.Component{
           <View style={styles.containerImg}>  
             <Image  
               style={styles.img}
-              source={require("./img/Chapeu.jpg")}
+              source={require("../img/Chapeu.jpg")}
             />
           </View>
 

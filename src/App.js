@@ -2,14 +2,14 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import Index from './componentes/Index'
-import PedraFilosofal from './componentes/PedraFilosofal'
-import CamaraSecreta from './componentes/CamaraSecreta'
-import PrisioneirodeAzkaban from './componentes/PrisioneirodeAzkaban'
-import CaliceDeFogo from './componentes/CaliceDeFogo'
-import OrdemDaFenix from './componentes/ordemDaFenix'
-import EnigmaDoPrincipe from './componentes/enigmaDoPrincipe'
-import ReliquiasDaMorte from './componentes/reliquiasDaMorte'
+import Index from './componentes/views/Index'
+import PedraFilosofal from './componentes/views/PedraFilosofal'
+import CamaraSecreta from './componentes/views/CamaraSecreta'
+import PrisioneirodeAzkaban from './componentes/views/PrisioneirodeAzkaban'
+import CaliceDeFogo from './componentes/views/CaliceDeFogo'
+import OrdemDaFenix from './componentes/views/ordemDaFenix'
+import EnigmaDoPrincipe from './componentes/views/enigmaDoPrincipe'
+import ReliquiasDaMorte from './componentes/views/reliquiasDaMorte'
 
 const Stack = createStackNavigator()
 

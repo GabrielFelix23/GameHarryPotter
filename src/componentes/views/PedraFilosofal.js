@@ -6,20 +6,21 @@ Image,
 TouchableOpacity, 
 Alert } from 'react-native'
 
-export default class ReliquiasDaMorte extends React.Component{
+export default class PedraFilosofal extends React.Component{
   frases = [
   //Verdadeiras
-  "As três Reliquias da Morte são as  Varinha das varinhas,Pedra, capa de invisibilidade",
-  "O patronoum de Harry é o Cervo",
-  "Quem possui a Varinha das Varinhas é o Alvo Dumbledore",
-  "Quem rouba a verdadeira Horcrux na casa dos Blacks é o Mundongo",
-  "O feitiço para apagar a mente das pessoas é o Obiviate",
+  "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort",
+  "O nome do professor de Feitiços é Filio Flitwick",
+  "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry",
+  "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal",
+  "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo",
+  "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts",
   //Falsas
-  "O nome do hipogrifo que foi companheiro de Hagrid e Sirius é Dobby",
-  "R.A.B é o irmão de Lord Voldemort",
-  "O feitiço para espantar Dementadores é Lumos Maxima",
-  "Quem mata Dobby no Setimo livro é o Lucio Malfoy",
-  "Na Tranferencia de Harry para a Toca, quem morre é o Jorge"
+  "Harry Potter faz aniversário dia 31/05",
+  "Rony tem três irmãos",
+  "São os alunos que se classificados para as casas de Hogwarts",
+  "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória",
+  "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"
   ]
   
   state = {
@@ -58,7 +59,7 @@ export default class ReliquiasDaMorte extends React.Component{
   }
 
   verdade = () => {
-    if(this.state.perguntas == "As três Reliquias da Morte são as  Varinha das varinhas,Pedra, capa de invisibilidade" || this.state.perguntas == "O patronoum de Harry é o Cervo" || this.state.perguntas == "Quem possui a Varinha das Varinhas é o Alvo Dumbledore"|| this.state.perguntas == "O feitiço para apagar a mente das pessoas é o Obiviate"|| this.state.perguntas == "Quem rouba a verdadeira Horcrux na casa dos Blacks é o Mundongo"){
+    if(this.state.perguntas == "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort" || this.state.perguntas == "O nome do professor de Feitiços é Filio Flitwick" || this.state.perguntas == "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry"|| this.state.perguntas == "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo"|| this.state.perguntas == "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts" || this.state.perguntas == "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal"){
         const perguntaRandom = Math.floor(Math.random() * this.frases.length)
         this.setState({
           perguntas: this.frases[perguntaRandom],
@@ -113,7 +114,7 @@ export default class ReliquiasDaMorte extends React.Component{
   }
 
   falso = () => {
-    if(this.state.perguntas == "O nome do hipogrifo que foi companheiro de Hagrid e Sirius é Dobby" || this.state.perguntas == "R.A.B é o irmão de Lord Voldemort"|| this.state.perguntas == "O feitiço para espantar Dementadores é Lumos Maxima"|| this.state.perguntas == "Quem mata Dobby no Setimo livro é o Lucio Malfoy"|| this.state.perguntas == "Na Tranferencia de Harry para a Toca, quem morre é o Jorge"){
+    if(this.state.perguntas == "Harry Potter faz aniversário dia 31/05" || this.state.perguntas == "Rony tem três irmãos"|| this.state.perguntas == "São os alunos que se classificados para as casas de Hogwarts"|| this.state.perguntas == "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória"|| this.state.perguntas == "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"){
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
 
       this.setState({
@@ -195,7 +196,7 @@ export default class ReliquiasDaMorte extends React.Component{
               }>
               <Image
                 style={styles.info}
-                source={require("./img/info.png")}
+                source={require("../img/info.png")}
               />
             </TouchableOpacity>  
           </View>
@@ -228,7 +229,7 @@ export default class ReliquiasDaMorte extends React.Component{
           <View style={styles.containerImg}>  
             <Image  
               style={styles.img}
-              source={require("./img/Chapeu.jpg")}
+              source={require("../img/Chapeu.jpg")}
             />
           </View>
 

@@ -6,21 +6,20 @@ Image,
 TouchableOpacity, 
 Alert } from 'react-native'
 
-export default class PedraFilosofal extends React.Component{
+export default class EnigmaDoPrincipe extends React.Component{
   frases = [
   //Verdadeiras
-  "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort",
-  "O nome do professor de Feitiços é Filio Flitwick",
-  "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry",
-  "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal",
-  "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo",
-  "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts",
+  "O nome do novo professor de Defesa Contra as Artes das Trevas é Severo Snape",
+  "O objeto que Draco Malfoy estava mexendo na Borgin e Burkes era no Armário Sumidouro",
+  "O nome da poção que Harry ganha por fazer a poção do morto-vivo é Felix Felicis",
+  "As Horcrux que Dumbledore destruíu foi o Anel de Servolo Gaunt",
+  "As seres que estavam em volta da caverna onde a Horcrux estava era Inferi",
   //Falsas
-  "Harry Potter faz aniversário dia 31/05",
-  "Rony tem três irmãos",
-  "São os alunos que se classificados para as casas de Hogwarts",
-  "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória",
-  "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"
+  "Quem trouxe comensais da morte para Hogwarts foi a Emione",
+  "Quem matou Dumbledore foi o Rony",
+  "O Príncipe Mestiço é o professor Snape",
+  "No fim, Harry descobre que o medalhão é falso. E quem pegou o verdadeiro foi o Percy Weasley",
+  "O feitiço usado por Harry contra Draco Malfoy foi o wingardium leviosa"
   ]
   
   state = {
@@ -59,7 +58,7 @@ export default class PedraFilosofal extends React.Component{
   }
 
   verdade = () => {
-    if(this.state.perguntas == "A pena de fênix foi usada para fazer o núcleo da varinha de Lorde Voldemort" || this.state.perguntas == "O nome do professor de Feitiços é Filio Flitwick" || this.state.perguntas == "Hagrid coloca um rabo de porco em Duda quando ele come o bolo de Harry"|| this.state.perguntas == "Hagrid leva um bolo de aniversário a Harry na noite em que ele foi até o Casebre-Sobre-o-Rochedo"|| this.state.perguntas == "Foi no terceiro ano que Hagrid estava cursando, quando ele foi expulso de Hogwarts" || this.state.perguntas == "As casas se Hogwarts são: Lufa Lufa, Sonserina, Grifinoria E Corvinal"){
+    if(this.state.perguntas == "O nome do novo professor de Defesa Contra as Artes das Trevas é Severo Snape" || this.state.perguntas == "O objeto que Draco Malfoy estava mexendo na Borgin e Burkes era no Armário Sumidouro" || this.state.perguntas == "O nome da poção que Harry ganha por fazer a poção do morto-vivo é Felix Felicis"|| this.state.perguntas == "As seres que estavam em volta da caverna onde a Horcrux estava era Inferi"|| this.state.perguntas == "As Horcrux que Dumbledore destruíu foi o Anel de Servolo Gaunt"){
         const perguntaRandom = Math.floor(Math.random() * this.frases.length)
         this.setState({
           perguntas: this.frases[perguntaRandom],
@@ -114,7 +113,7 @@ export default class PedraFilosofal extends React.Component{
   }
 
   falso = () => {
-    if(this.state.perguntas == "Harry Potter faz aniversário dia 31/05" || this.state.perguntas == "Rony tem três irmãos"|| this.state.perguntas == "São os alunos que se classificados para as casas de Hogwarts"|| this.state.perguntas == "No capítulo dez, a professora Minerva diz que Harry e Rony tiveram muita sorte por quê eles obtiveram muitos pontos para a Grifinória"|| this.state.perguntas == "A descrição da velha varinha de Rúbeo Hagrid é: Cedro e pena de fênix,trinta centímetros e rígida"){
+    if(this.state.perguntas == "Quem trouxe comensais da morte para Hogwarts foi a Emione" || this.state.perguntas == "Quem matou Dumbledore foi o Rony"|| this.state.perguntas == "O Príncipe Mestiço é o professor Snape"|| this.state.perguntas == "No fim, Harry descobre que o medalhão é falso. E quem pegou o verdadeiro foi o Percy Weasley"|| this.state.perguntas == "O feitiço usado por Harry contra Draco Malfoy foi o wingardium leviosa"){
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
 
       this.setState({
@@ -196,7 +195,7 @@ export default class PedraFilosofal extends React.Component{
               }>
               <Image
                 style={styles.info}
-                source={require("./img/info.png")}
+                source={require("../img/info.png")}
               />
             </TouchableOpacity>  
           </View>
@@ -229,7 +228,7 @@ export default class PedraFilosofal extends React.Component{
           <View style={styles.containerImg}>  
             <Image  
               style={styles.img}
-              source={require("./img/Chapeu.jpg")}
+              source={require("../img/Chapeu.jpg")}
             />
           </View>
 
