@@ -5,7 +5,7 @@ export default function Index({navigation}){
     return(
         <View style={styles.containerItens}>
             <View style={styles.containerInfo}> 
-                <TouchableOpacity onPress={() => Alert.alert("Filme favorito","Esse jogo é para provar que você é um bruxo ou uma bruxa de verdade, para entrar na escola de magia e bruxaria de Hogwarts.\nPrimeiro, escolha qual é o seu filme favorito.\nLogo após, vamos ver o quão você sabe sobre ele...")}>  
+                <TouchableOpacity onPress={() => Alert.alert("GameHarryPotter","Esse jogo é para provar que você é um bruxo ou uma bruxa de verdade, para entrar na escola de magia e bruxaria de Hogwarts.\nPrimeiro, escolha qual é o seu filme favorito.\nLogo após, vamos ver o quão você sabe sobre ele...")}>  
                     <Image  
                         style={styles.info}
                         source={require("./img/info.png")}
