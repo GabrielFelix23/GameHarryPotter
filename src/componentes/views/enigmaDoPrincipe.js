@@ -16,7 +16,7 @@ export default class EnigmaDoPrincipe extends React.Component{
   "As Horcrux que Dumbledore destruíu foi o Anel de Servolo Gaunt",
   "As seres que estavam em volta da caverna onde a Horcrux estava era Inferi",
   //Falsas
-  "Quem trouxe comensais da morte para Hogwarts foi a Emione",
+  "Quem trouxe comensais da morte para Hogwarts foi a Hemione",
   "Quem matou Dumbledore foi o Rony",
   "O Príncipe Mestiço é o professor Snape",
   "No fim, Harry descobre que o medalhão é falso. E quem pegou o verdadeiro foi o Percy Weasley",
@@ -114,7 +114,7 @@ export default class EnigmaDoPrincipe extends React.Component{
   }
 
   falso = () => {
-    if(this.state.perguntas == "Quem trouxe comensais da morte para Hogwarts foi a Emione" || this.state.perguntas == "Quem matou Dumbledore foi o Rony"|| this.state.perguntas == "O Príncipe Mestiço é o professor Snape"|| this.state.perguntas == "No fim, Harry descobre que o medalhão é falso. E quem pegou o verdadeiro foi o Percy Weasley"|| this.state.perguntas == "O feitiço usado por Harry contra Draco Malfoy foi o wingardium leviosa"){
+    if(this.state.perguntas == "Quem trouxe comensais da morte para Hogwarts foi a Hemione" || this.state.perguntas == "Quem matou Dumbledore foi o Rony"|| this.state.perguntas == "O Príncipe Mestiço é o professor Snape"|| this.state.perguntas == "No fim, Harry descobre que o medalhão é falso. E quem pegou o verdadeiro foi o Percy Weasley"|| this.state.perguntas == "O feitiço usado por Harry contra Draco Malfoy foi o wingardium leviosa"){
       let perguntaRandom = Math.floor(Math.random() * this.frases.length)
 
       this.setState({

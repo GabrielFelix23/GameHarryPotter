@@ -76,10 +76,9 @@ export default StyleSheet.create({
       fontSize: 20,
       color: 'white'
     },
-    img:{
-      borderRadius: 100, 
-      width: 160, 
-      height: 160
+    img:{ 
+      width: 180, 
+      height: 189
     },
     info:{
       width: 50,
