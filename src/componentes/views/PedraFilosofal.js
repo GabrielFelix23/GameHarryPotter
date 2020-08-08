@@ -38,7 +38,6 @@ export default class PedraFilosofal extends React.Component{
     styleZerar: '',
     zerar: '',
     imgHarry: require("../img/Harry.png"),
-
   }
 
   verdade = () => {

@@ -34,26 +34,8 @@ export default class CaliceDeFogo extends React.Component{
     styleComecar: Styles.botaoComecar,
     comecar: 'Estou pronto!',
     styleZerar: '',
-    zerar: ''
-  }
-
-  comecar = () => {
-    const perguntaRandom = Math.floor(Math.random() * this.frases.length)
-        this.setState({
-          perguntas: this.frases[perguntaRandom],
-          respostaCerta: '',
-          respostaErrada: '',
-          pontosCertos: 0,
-          pontosErrados: 0,
-          styleVedareiro: Styles.botaoVerdade,
-          verdadeiro: "Verdadeiro",
-          styleFalso: Styles.botaoFalso,
-          falso: 'Falso',
-          styleComecar: '',
-          comecar: '',
-          styleZerar: Styles.botaoZera,
-          zerar: "Zerar"
-        })
+    zerar: '',
+    imgHarry: require("../img/Harry.png"),
   }
 
   verdade = () => {
@@ -62,12 +44,14 @@ export default class CaliceDeFogo extends React.Component{
         this.setState({
           perguntas: this.frases[perguntaRandom],
           respostaCerta: "Resposta Certa. Parabéns!",
+          imgHarry: require("../img/dumbledore.png"),
           respostaErrada: '',
           pontosCertos: this.state.pontosCertos + 1
         })
         if(this.state.pontosCertos === 10){
           this.setState({
             perguntas: "Parabéns!! Eu sábia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
+            imgHarry: require("../img/HarryVencedor.png"),
             respostaCerta: '',
             respostaErrada: '',
             pontosCertos: 0,
@@ -88,12 +72,14 @@ export default class CaliceDeFogo extends React.Component{
       this.setState({
         perguntas: this.frases[perguntaRandom],
         respostaErrada: "Resposta Errada!",
+        imgHarry: require("../img/Rony.png"),
         respostaCerta: '',
         pontosErrados: this.state.pontosErrados + 1
       })
       if(this.state.pontosErrados === 10){
         this.setState({
           perguntas: "Muito triste!\nDessa vez você não pode entrar para a escola de magia e bruxaria de Hogwarts.\nMas não desista, refaça a teste e venha fazer parte das nossas aventuras. Boa sorte!", 
+          imgHarry: require("../img/hagrid.png"),
           respostaCerta: '',
           respostaErrada: '',
           pontosCertos: 0,
@@ -118,12 +104,14 @@ export default class CaliceDeFogo extends React.Component{
       this.setState({
         perguntas: this.frases[perguntaRandom],
         respostaCerta: "Resposta Certa. Parabéns!",
+        imgHarry: require("../img/dumbledore.png"),
         respostaErrada: '',
         pontosCertos: this.state.pontosCertos + 1
       })
       if(this.state.pontosCertos === 10){
         this.setState({
           perguntas: "Parabéns!! Eu sábia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
+          imgHarry: require("../img/HarryVencedor.png"),
           respostaCerta: '',
           respostaErrada: '',
           pontosCertos: 0,
@@ -143,12 +131,14 @@ export default class CaliceDeFogo extends React.Component{
       this.setState({
         perguntas: this.frases[perguntaRandom],
         respostaErrada: "Resposta Errada!",
+        imgHarry: require("../img/Rony.png"),
         respostaCerta: '',
         pontosErrados: this.state.pontosErrados + 1
       })
       if(this.state.pontosErrados === 10){
         this.setState({
           perguntas: "Muito triste!\nDessa vez você não pode entrar para a escola de magia e bruxaria de Hogwarts.\nMas não desista, refaça a teste e venha fazer parte das nossas aventuras. Boa sorte!", 
+          imgHarry: require("../img/hagrid.png"),
           respostaCerta: '',
           respostaErrada: '',
           pontosCertos: 0,
@@ -166,6 +156,26 @@ export default class CaliceDeFogo extends React.Component{
     }
   }
 
+  comecar = () => {
+    const perguntaRandom = Math.floor(Math.random() * this.frases.length)
+        this.setState({
+          perguntas: this.frases[perguntaRandom],
+          respostaCerta: '',
+          respostaErrada: '',
+          pontosCertos: 0,
+          pontosErrados: 0,
+          styleVedareiro: Styles.botaoVerdade,
+          verdadeiro: "Verdadeiro",
+          styleFalso: Styles.botaoFalso,
+          falso: 'Falso',
+          styleComecar: '',
+          comecar: '',
+          styleZerar: Styles.botaoZera,
+          zerar: "Zerar",
+          imgHarry: require("../img/Harry.png"),
+        })
+  }
+
   zerar = () => {
     this.setState({
       perguntas: 'Olá meus bruxos e bruxas, Vamos começar ?',
@@ -181,6 +191,7 @@ export default class CaliceDeFogo extends React.Component{
       verdadeiro: '',
       styleFalso: '',
       falso: '',
+      imgHarry: require("../img/Harry.png"),
     })
   }
 
@@ -227,7 +238,7 @@ export default class CaliceDeFogo extends React.Component{
           <View style={Styles.containerImg}>  
             <Image  
               style={Styles.img}
-              source={require("../img/Chapeu.jpg")}
+              source={this.state.imgHarry}
             />
           </View>
 
