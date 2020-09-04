@@ -52,7 +52,7 @@ export default class PedraFilosofal extends React.Component{
         })
         if(this.state.pontosCertos === 10){
           this.setState({
-            perguntas: "Parabéns!! Eu sábia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
+            perguntas: "Parabéns!! Eu sabia que você iria fazer parte das nossas aventuras.\nAgora a escola de magia e bruxaria de Hogwarts espera por você.\nSeja bem vindo(a)!",
             imgHarry: require("../img/HarryVencedor.png"),
             respostaCerta: '',
             respostaErrada: '',
